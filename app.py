@@ -52,7 +52,10 @@ if uploaded_file is not None:
     if st.button('Predict'):
         prediction = predict_image(image_tensor)
         if prediction == 1:
-            st.markdown("<span style='color:green; font-size:24px'>Prediction: **Good Embryo**</span>", unsafe_allow_html=True)
+            st.markdown(
+                "<span style='font-size:24px'>Prediction: <strong style='color:green;'>Good Embryo</strong></span>",
+                unsafe_allow_html=True)
         else:
-            st.markdown("<span style='color:red; font-size:24px'>Prediction: **Bad Embryo**</span>",
-                        unsafe_allow_html=True)
+            st.markdown(
+                "<span style='font-size:24px'>Prediction: <strong style='color:red;'>Bad Embryo</strong></span>",
+                unsafe_allow_html=True)
